@@ -1,0 +1,340 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>blog搭建 | Lemon</title><meta name="author" content="Vage"><meta name="copyright" content="Vage"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1. 了解NodeNode.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时, 它不是一门新的语言哈。 我们暂时不用太在意它的一些知识点，不需要现在学习。 目前只需要知道如何安装，然后如何使用一些简单的命令来实现我们现阶段想要做的功能。 1.1 安装Node我们进入Node的官网  Node.js  如何安装Node.js 查看安装好的版本 terminal 终端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="blog搭建">
+<meta property="og:url" content="http://example.com/2022/07/07/blog%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:site_name" content="Lemon">
+<meta property="og:description" content="1. 了解NodeNode.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时, 它不是一门新的语言哈。 我们暂时不用太在意它的一些知识点，不需要现在学习。 目前只需要知道如何安装，然后如何使用一些简单的命令来实现我们现阶段想要做的功能。 1.1 安装Node我们进入Node的官网  Node.js  如何安装Node.js 查看安装好的版本 terminal 终端">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/wz.jpg">
+<meta property="article:published_time" content="2022-07-07T08:43:50.533Z">
+<meta property="article:modified_time" content="2022-07-12T07:49:40.460Z">
+<meta property="article:author" content="Vage">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/wz.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/07/07/blog%E6%90%AD%E5%BB%BA/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'blog搭建',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-07-12 15:49:40'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Lemon" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/th.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/wz.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Lemon</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">blog搭建</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-07T08:43:50.533Z" title="发表于 2022-07-07 16:43:50">2022-07-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-07-12T07:49:40.460Z" title="更新于 2022-07-12 15:49:40">2022-07-12</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="blog搭建"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="1-了解Node"><a href="#1-了解Node" class="headerlink" title="1. 了解Node"></a>1. 了解Node</h2><p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时, 它不是一门新的语言哈。</p>
+<p>我们暂时不用太在意它的一些知识点，不需要现在学习。</p>
+<p>目前只需要知道如何安装，然后如何使用一些简单的命令来实现我们现阶段想要做的功能。</p>
+<h3 id="1-1-安装Node"><a href="#1-1-安装Node" class="headerlink" title="1.1 安装Node"></a>1.1 安装Node</h3><p>我们进入Node的官网  <a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">Node.js</a></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/nodejs/nodejs-install-setup.html">如何安装Node.js</a></li>
+<li>查看安装好的版本</li>
+<li>terminal 终端     <a target="_blank" rel="noopener" href="https://blog.csdn.net/wxiao_xiao_miao/article/details/120228056">什么是终端?</a></li>
+<li>win+R  输入 cmd  回车， 可以打开终端</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看安装的node版本 </span></span><br><span class="line">node -v</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">node --version</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这里推荐安装长期维护版本 （LTS版本）（Long Term Support 长期支持维护的意思）</li>
+</ul>
+<h3 id="1-2-什么是npm"><a href="#1-2-什么是npm" class="headerlink" title="1.2 什么是npm"></a>1.2 什么是npm</h3><p>npm是随同Node.js一起安装的<strong>包管理工具</strong>, 我们可以通过<code>npm install</code>等一些命令安装我们需要的第三方包（库）</p>
+<ul>
+<li>查看版本</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装第三方包</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install xxx</span><br><span class="line"><span class="comment"># 或者简写为</span></span><br><span class="line">npm i xxx</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-Git"><a href="#1-3-Git" class="headerlink" title="1.3 Git"></a>1.3 Git</h3><p>Git（读音为/gɪt/）是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。</p>
+<p>从一般开发者的角度来看，git有以下功能：</p>
+<p>1、从服务器上克隆完整的Git仓库（包括代码和版本信息）到单机上。</p>
+<p>2、在自己的机器上根据不同的开发目的，创建分支，修改代码。</p>
+<p>3、在单机上自己创建的分支上提交代码。</p>
+<p>4、在单机上合并分支。</p>
+<p>5、把服务器上最新版的代码fetch下来，然后跟自己的主分支合并。</p>
+<p>6、生成补丁（patch），把补丁发送给主开发者。</p>
+<p>7、看主开发者的反馈，如果主开发者发现两个一般开发者之间有冲突（他们之间可以合作解决的冲突），就会要求他们先解决冲突，然后再由其中一个人提交。如果主开发者可以自己解决，或者没有冲突，就通过。</p>
+<p>8、一般开发者之间解决冲突的方法，开发者之间可以使用pull 命令解决冲突，解决完冲突之后再向主开发者提交补丁。</p>
+<p>上图展示了git的整体架构，以及和各部分相关的主要命令。先说明下其中涉及的各部分。</p>
+<p><strong>工作区(working directory)，</strong>简言之就是你工作的区域。对于git而言，就是的本地工作目录。工作区的内容会包含提交到暂存区和版本库(当前提交点)的内容，同时也包含自己的修改内容。</p>
+<p><strong><a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E6%9A%82%E5%AD%98%E5%8C%BA&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:625881308%7D">暂存区</a>(stage area, 又称为索引区index)，</strong>是git中一个非常重要的概念。是我们把修改提交版本库前的一个过渡阶段。查看GIT自带帮助手册的时候，通常以index来表示暂存区。在工作目录下有一个.git的目录，里面有个index文件，存储着关于暂存区的内容。git add命令将工作区内容添加到暂存区。</p>
+<p><strong>本地仓库(local repository)，</strong>版本控制系统的仓库，存在于本地。当执行git commit命令后，会将暂存区内容提交到仓库之中。在工作区下面有.git的目录，这个目录下的内容不属于工作区，里面便是仓库的数据信息，暂存区相关内容也在其中。这里也可以使用merge或rebase将<strong>远程仓库副本</strong>合并到本地仓库。图中的只有merge，注意这里也可以使用rebase。</p>
+<p><strong>远程版本库(remote repository)，</strong>与本地仓库概念基本一致，不同之处在于一个存在远程，可用于远程协作，一个却是存在于本地。通过push/pull可实现本地与远程的交互；</p>
+<p><strong>远程仓库副本，</strong>可以理解为存在于本地的远程仓库缓存。如需更新，可通过git fetch/pull命令获取远程仓库内容。使用fech获取时，并未合并到本地仓库，此时可使用git merge实现远程仓库副本与本地仓库的合并。git pull 根据配置的不同，可为git fetch + git merge 或 git fetch + git rebase。rebase和merge的区别可以自己去网上找些资料了解下。</p>
+<p><strong>Git 的一些相关命令</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git --version  					<span class="comment"># 查看git版本</span></span><br><span class="line">git <span class="built_in">clone</span>	+ address			<span class="comment"># 克隆某个从库</span></span><br><span class="line">git status     					<span class="comment"># 查看当前修改状态</span></span><br><span class="line">git add .       				<span class="comment"># 添加所有修改内容到暂存区</span></span><br><span class="line">git commit -m <span class="string">&quot;msg&quot;</span> 				<span class="comment"># 将暂存区内容提交到本地仓库</span></span><br><span class="line">git push 								<span class="comment"># 将本地仓库内容，提交到远程仓库</span></span><br><span class="line">git pull                <span class="comment"># 将远程仓库内容拉取，并与本地仓库合并</span></span><br><span class="line">git fetch  							<span class="comment"># 将远程仓库内容拉取到--&gt; 本地的远程仓库缓存中， 暂不合并到本地仓库。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-了解静态blog"><a href="#2-了解静态blog" class="headerlink" title="2. 了解静态blog"></a>2. 了解静态blog</h2><p><a target="_blank" rel="noopener" href="https://jamstack.org/generators/">https://jamstack.org/generators/</a></p>
+<p>静态文档，什么是静态呢，就是说我们的数据都是本地准备好的，没有和后端做一个网络http请求上的数据交互。</p>
+<p>比如说我们的typora笔记是markdown格式的，我们可以通过docsify这个第三方库，直接将我们的md文件生成静态文档，而不需要向后端请求动态数据。</p>
+<p>静态文档(blog)的生成工具（库）有很多，常用的有</p>
+<ul>
+<li>hexo （基于node.js，可选主题很多）</li>
+<li>hugo   （基于go，速度快）</li>
+<li>vuePress （Vue官网就是通过它写的）</li>
+<li>docsify  （轻量简洁）</li>
+<li>next.js  （基于React SSR ，强大）</li>
+</ul>
+<p>大家以后有时间都可以尝试着搭建一下哈</p>
+<h2 id="3-hexo"><a href="#3-hexo" class="headerlink" title="3. hexo"></a>3. hexo</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a target="_blank" rel="noopener" href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。  –&gt; 2012年</p>
+<h3 id="3-1-安装Node-js-Git"><a href="#3-1-安装Node-js-Git" class="headerlink" title="3.1 安装Node.js / Git"></a>3.1 安装Node.js / Git</h3><p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="http://nodejs.org/">Node.js</a> (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</p>
+<ul>
+<li>太高会报warning警告  </li>
+<li><code>nvm ls-remote --lts</code> 忽略这句，需要装nvm</li>
+<li><a target="_blank" rel="noopener" href="https://registry.npmmirror.com/binary.html?path=node/">https://registry.npmmirror.com/binary.html?path=node/</a>  node版本</li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://git-scm.com/">Git</a></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://git-scm.com/download/mac">http://git-scm.com/download/mac</a></li>
+<li><a target="_blank" rel="noopener" href="http://git-scm.com/download/win">http://git-scm.com/download/win</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-全局安装-hexo"><a href="#3-2-全局安装-hexo" class="headerlink" title="3.2 全局安装 hexo"></a>3.2 全局安装 hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-新建一个文件键-hexo-blog"><a href="#1-新建一个文件键-hexo-blog" class="headerlink" title="1. 新建一个文件键 hexo-blog"></a>1. 新建一个文件键 hexo-blog</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm install    <span class="comment"># npm i   # yarn install</span></span><br></pre></td></tr></table></figure>
+
+<p>装好后, 文件内的目录结构大致如下</p>
+<ul>
+<li>看官方文档 - <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/setup">https://hexo.io/zh-cn/docs/setup</a></li>
+</ul>
+<p>其中，source存放我们的草稿和post文件。 theme是主题文件夹</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.<span class="property">yml</span></span><br><span class="line">├── package.<span class="property">json</span></span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>_config.yml 网站配置信息 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">https://hexo.io/zh-cn/docs/configuration</a></li>
+<li>package.json</li>
+</ol>
+<p><code>package.json</code> 文件是项目的清单。 它可以做很多完全互不相关的事情。 例如，它是用于工具的配置中心。 它也是 <code>npm</code> 和 <code>yarn</code> 存储所有已安装软件包的名称和版本的地方。</p>
+<p>省略。。。</p>
+<p>PS. </p>
+<ul>
+<li><p>淘宝镜像源 <a target="_blank" rel="noopener" href="https://npmmirror.com/">https://npmmirror.com/</a></p>
+</li>
+<li><p>迁移2022-6-30： <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/465424728?spm=a2c6h.24755359.0.0.6d444dccWMZOJM">https://zhuanlan.zhihu.com/p/465424728?spm=a2c6h.24755359.0.0.6d444dccWMZOJM</a></p>
+</li>
+</ul>
+<h3 id="3-2-命令"><a href="#3-2-命令" class="headerlink" title="3.2 命令"></a>3.2 命令</h3><ol>
+<li><strong>new</strong> 新建一篇文章</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo new post title  <span class="comment"># 如果标题包含空格， 用“” 或&#x27;&#x27; 引起来</span></span><br><span class="line">hexo new post <span class="string">&quot;好好学习 天天向上&quot;</span></span><br><span class="line">hexo n <span class="string">&quot;第一篇博客&quot;</span>  <span class="comment"># 简写</span></span><br><span class="line">hexo n <span class="built_in">test</span>        <span class="comment"># 没有引号也可以</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>generate</strong> 生成静态文件</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo g        <span class="comment"># 简写</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>server</strong> 启动服务器 </li>
+</ol>
+<p>默认情况下，访问网址为： <code>http://localhost:4000/</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br><span class="line">hexo s       <span class="comment"># 简写</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><strong>deploy</strong>    部署</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br><span class="line">hexo d        # 简写</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><strong>clean</strong>   清缓存</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。</p>
+<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<h3 id="3-3-theme-主题"><a href="#3-3-theme-主题" class="headerlink" title="3.3 theme 主题"></a>3.3 theme 主题</h3><p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+<p>挑一个喜欢的安装~~~  Enjoy！</p>
+<p>点击主题蓝色的文字 进入 github主题库的安装说明， 按步骤来就好了~~</p>
+<p>For Example</p>
+<p><strong>keep 主题</strong></p>
+<p>If you’re using Hexo 5.0 or later, the simplest way to install is through npm:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd hexo-site</span><br><span class="line">$ npm install hexo-theme-keep</span><br></pre></td></tr></table></figure>
+
+<p>Or you can clone the entire repository:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd hexo-site</span><br><span class="line">$ git clone https://github.com/XPoet/hexo-theme-keep themes/keep</span><br></pre></td></tr></table></figure>
+
+<p>After the installation, open Hexo config file and set <code>theme</code> variable to <code>keep</code>.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: keep</span><br></pre></td></tr></table></figure>
+
+<p><strong>Next 主题</strong></p>
+<h3 id="3-4-一键部署"><a href="#3-4-一键部署" class="headerlink" title="3.4 一键部署"></a>3.4 一键部署</h3><ol>
+<li>安装 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a>。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h4 id="部署在Github"><a href="#部署在Github" class="headerlink" title="- 部署在Github"></a>- 部署在Github</h4><h4 id="1-github-中新建仓库"><a href="#1-github-中新建仓库" class="headerlink" title="1. github 中新建仓库!"></a>1. github 中新建仓库!</h4><h4 id="2-注意仓库命名"><a href="#2-注意仓库命名" class="headerlink" title="2. 注意仓库命名!"></a>2. 注意仓库命名!</h4><p><strong>注意: 我们的blog仓库名字 必须是 github 的 <code>用户名 +github.io </code>   ==&gt;    <code>username.github.io</code> !</strong></p>
+<h4 id="3-复制仓库地址"><a href="#3-复制仓库地址" class="headerlink" title="3. 复制仓库地址"></a>3. 复制仓库地址</h4><h4 id="4-修改-config-yml中部署相关配置"><a href="#4-修改-config-yml中部署相关配置" class="headerlink" title="4. 修改_config.yml中部署相关配置"></a>4. 修改_config.yml中部署相关配置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: &lt;repository url&gt; <span class="comment">#https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io</span></span><br><span class="line">  branch: [branch]</span><br><span class="line">  message: [message]</span><br><span class="line">  改为===&gt;</span><br><span class="line">  </span><br><span class="line">  deploy:</span><br><span class="line">  <span class="built_in">type</span>: <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  repo: https://gitee.com/vrfe/hexo-blog.git   <span class="comment"># 刚才复制的地址</span></span><br><span class="line">  branch: master  <span class="comment"># 改为master     注意  冒号:后面有一个空格!</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="5-执行hexo打包发布命令"><a href="#5-执行hexo打包发布命令" class="headerlink" title="5. 执行hexo打包发布命令"></a>5. 执行hexo打包发布命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo g   <span class="comment"># 产生部署文件  generate</span></span><br><span class="line">hexo d   <span class="comment"># deploy  部署 上传</span></span><br><span class="line"><span class="comment"># 可以简写合并 </span></span><br><span class="line">hexo g -d    <span class="comment"># 打包部署上传,  一键完成部署</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-部署在gitee"><a href="#2-部署在gitee" class="headerlink" title="- 2 部署在gitee"></a>- 2 部署在gitee</h4><ol start="2">
+<li>gitee中新建仓库</li>
+</ol>
+<ol start="2">
+<li>修改_config.yml中部署相关配置。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: &lt;repository url&gt; <span class="comment">#https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io</span></span><br><span class="line">  branch: [branch]</span><br><span class="line">  message: [message]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  repo: https://gitee.com/vrfe/hexo-blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>执行命令</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line"># 合并 </span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="4-docsify"><a href="#4-docsify" class="headerlink" title="4.docsify"></a>4.docsify</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://docsify.js.org/#/zh-cn/quickstart">docsify-官网</a></li>
+</ul>
+<h3 id="4-1-全局安装"><a href="#4-1-全局安装" class="headerlink" title="4.1 全局安装"></a>4.1 全局安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i docsify-cli -g</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-本地预览"><a href="#4-2-本地预览" class="headerlink" title="4.2 本地预览"></a>4.2 本地预览</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cd 到 docs 目录，执行</span></span><br><span class="line">docsify serve</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Vage</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/07/07/blog%E6%90%AD%E5%BB%BA/">http://example.com/2022/07/07/blog%E6%90%AD%E5%BB%BA/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Lemon</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/wz.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2022/07/12/this-%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/"><img class="prev-cover" src="/img/this%E6%8C%87%E5%90%91.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">this指向问题</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/th.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Vage</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/EvilLittleMage"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is My Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BA%86%E8%A7%A3Node"><span class="toc-number">1.</span> <span class="toc-text">1. 了解Node</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%AE%89%E8%A3%85Node"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 安装Node</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E4%BB%80%E4%B9%88%E6%98%AFnpm"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 什么是npm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-Git"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Git</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BA%86%E8%A7%A3%E9%9D%99%E6%80%81blog"><span class="toc-number">2.</span> <span class="toc-text">2. 了解静态blog</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-hexo"><span class="toc-number">3.</span> <span class="toc-text">3. hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%AE%89%E8%A3%85Node-js-Git"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 安装Node.js &#x2F; Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85-hexo"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 全局安装 hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E9%94%AE-hexo-blog"><span class="toc-number">3.2.1.</span> <span class="toc-text">1. 新建一个文件键 hexo-blog</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%91%BD%E4%BB%A4"><span class="toc-number">3.3.</span> <span class="toc-text">3.2 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-theme-%E4%B8%BB%E9%A2%98"><span class="toc-number">3.4.</span> <span class="toc-text">3.3 theme 主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2"><span class="toc-number">3.5.</span> <span class="toc-text">3.4 一键部署</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%9C%A8Github"><span class="toc-number">3.5.1.</span> <span class="toc-text">- 部署在Github</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-github-%E4%B8%AD%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-number">3.5.2.</span> <span class="toc-text">1. github 中新建仓库!</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%B3%A8%E6%84%8F%E4%BB%93%E5%BA%93%E5%91%BD%E5%90%8D"><span class="toc-number">3.5.3.</span> <span class="toc-text">2. 注意仓库命名!</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%A4%8D%E5%88%B6%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="toc-number">3.5.4.</span> <span class="toc-text">3. 复制仓库地址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E4%BF%AE%E6%94%B9-config-yml%E4%B8%AD%E9%83%A8%E7%BD%B2%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE"><span class="toc-number">3.5.5.</span> <span class="toc-text">4. 修改_config.yml中部署相关配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E6%89%A7%E8%A1%8Chexo%E6%89%93%E5%8C%85%E5%8F%91%E5%B8%83%E5%91%BD%E4%BB%A4"><span class="toc-number">3.5.6.</span> <span class="toc-text">5. 执行hexo打包发布命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E9%83%A8%E7%BD%B2%E5%9C%A8gitee"><span class="toc-number">3.5.7.</span> <span class="toc-text">- 2 部署在gitee</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-docsify"><span class="toc-number">4.</span> <span class="toc-text">4.docsify</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 全局安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 本地预览</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/07/12/new%E5%85%B3%E9%94%AE%E5%AD%97%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/" title="new关键字执行过程"><img src="/img/wz2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="new关键字执行过程"/></a><div class="content"><a class="title" href="/2022/07/12/new%E5%85%B3%E9%94%AE%E5%AD%97%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/" title="new关键字执行过程">new关键字执行过程</a><time datetime="2022-07-12T12:18:03.000Z" title="发表于 2022-07-12 20:18:03">2022-07-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/12/%E4%BB%80%E4%B9%88%E6%98%AF%E9%97%AD%E5%8C%85/" title="什么是闭包"><img src="/img/wz1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="什么是闭包"/></a><div class="content"><a class="title" href="/2022/07/12/%E4%BB%80%E4%B9%88%E6%98%AF%E9%97%AD%E5%8C%85/" title="什么是闭包">什么是闭包</a><time datetime="2022-07-12T12:10:20.000Z" title="发表于 2022-07-12 20:10:20">2022-07-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/12/this-%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/" title="this指向问题"><img src="/img/this%E6%8C%87%E5%90%91.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="this指向问题"/></a><div class="content"><a class="title" href="/2022/07/12/this-%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/" title="this指向问题">this指向问题</a><time datetime="2022-07-12T07:37:23.000Z" title="发表于 2022-07-12 15:37:23">2022-07-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/07/blog%E6%90%AD%E5%BB%BA/" title="blog搭建"><img src="/img/wz.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="blog搭建"/></a><div class="content"><a class="title" href="/2022/07/07/blog%E6%90%AD%E5%BB%BA/" title="blog搭建">blog搭建</a><time datetime="2022-07-07T08:43:50.533Z" title="发表于 2022-07-07 16:43:50">2022-07-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Vage</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
